@@ -1,10 +1,8 @@
-// Code to implement the gcf function goes here
+// Code to implement the recursive gcf function goes here
 
 int gcf(int a, int b) {
-  while (b != 0) {
-    int temp = b;
-    b = a % b;
-    a = temp;
+  if (b == 0) {
+    return a;
   }
-  return a;
+  return gcf(b, a % b);
 }
